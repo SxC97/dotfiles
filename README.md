@@ -12,3 +12,4 @@ Todo:
 * App List
 * Alfred
 * `default writes` commands
+* iTerm2
