@@ -1,6 +1,7 @@
 # My-MacOS
 
 Todo:
+* Hammerspoon
 * Emacs Config
 * Vim Config
 * VSC Config
