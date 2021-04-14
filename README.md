@@ -12,3 +12,5 @@ Todo:
 * Alfred
 * `default writes` commands
 * iTerm2
+* Swiftbar
+* Übersicht Widgets
