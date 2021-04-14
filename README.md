@@ -8,3 +8,7 @@ Todo:
 * TMUX Config
 * Oh-My-ZSH
 * Karabiner
+* Brew
+* App List
+* Alfred
+* `default writes` commands
