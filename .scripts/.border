@@ -1,0 +1,37 @@
+#!/bin/bash
+
+SPACETYPE="$(yabai -m query --spaces --space | jq '.type')"
+echo $SPACETYPE
+
+# If the spacetype is bsp then toggle window border, otherwise turn it off
+if [[ $SPACETYPE = '"bsp"' ]]; then
+  # find total number of windows on current space that are not floating, not sticky, not minimized, but are visible.
+  TOTAL="$(yabai -m query --windows --space | jq '.[] | select(.floating==0) | select(.sticky==0) | select(.visible==1) | select(.minimized==0) | length % 23 + 1' | wc -l)"
+
+  if pgrep -x "limelight" >/dev/null
+  then
+    RUNNING='1'
+  else
+    RUNNING='0'
+  fi
+
+  # if more than 1 window is open on the current space
+  if [[ $TOTAL -gt 1 ]]; then
+    # if limelight is not running
+    if [[ $RUNNING -eq '0' ]]; then
+      # start limelight
+      limelight -c ~/.limelightrc
+    fi
+  # else if there is only 1 window on the current space
+  else
+    # if limelight is running
+    if [[ $RUNNING -eq '1' ]]; then
+      # kill limelight
+      killall limelight &> /dev/null
+    fi
+  fi
+
+# if the spacetype is not bsp, kill limelight
+else
+  killall limelight &> /dev/null
+fi
