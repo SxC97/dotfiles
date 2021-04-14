@@ -1,0 +1,15 @@
+#!/bin/bash
+
+TOTAL="$(yabai -m query --windows --space | jq '.[] | select(.minimized==0) | .minimized' | wc -l)"
+
+if [[ $TOTAL -gt 1 ]]; then
+  osascript -e 'tell application id "tracesOf.Uebersicht" to set hidden of widget id "clock-coffee" to true'
+  osascript -e 'tell application id "tracesOf.Uebersicht" to set hidden of widget id "date-coffee" to true'
+  osascript -e 'tell application id "tracesOf.Uebersicht" to set hidden of widget id "time-coffee" to true'
+  echo $TOTAL
+else
+  osascript -e 'tell application id "tracesOf.Uebersicht" to set hidden of widget id "clock-coffee" to false'
+  osascript -e 'tell application id "tracesOf.Uebersicht" to set hidden of widget id "date-coffee" to false'
+  osascript -e 'tell application id "tracesOf.Uebersicht" to set hidden of widget id "time-coffee" to false'
+  echo $TOTAL
+fi
