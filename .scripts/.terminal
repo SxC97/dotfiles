@@ -1,0 +1,5 @@
+osascript -e "
+  tell application \"iTerm2\"
+    activate
+    set new_term to (create window with default profile)
+  end tell"
