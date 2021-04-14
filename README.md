@@ -14,3 +14,6 @@ Todo:
 * iTerm2
 * Swiftbar
 * Übersicht Widgets
+* Safari
+* Firefox
+* MacForge
