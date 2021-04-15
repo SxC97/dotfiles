@@ -17,6 +17,7 @@ Upload Files:
 * PATH
 * Launchd
 * fzf
+* mpd
 * .scripts
 
 Write Wiki:
