@@ -11,7 +11,6 @@ Upload Files:
 * `default writes` commands
 * iTerm2 + color schemes
 * Swiftbar
-* Übersicht Widgets
 * Firefox
 * MacForge
 * Fonts
@@ -29,3 +28,4 @@ Write Wiki:
 * Tmux
 * p10k
 * VSC Config + Extensions
+* Übersicht Widgets
