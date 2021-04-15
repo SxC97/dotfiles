@@ -3,7 +3,6 @@
 Todo
 
 Upload Files:
-* Vim Config
 * VSC Config
 * TMUX Config
 * Oh-My-ZSH
@@ -26,3 +25,4 @@ Write Wiki:
 * Karabiner
 * Safari
 * Emacs Config
+* Vim Config
