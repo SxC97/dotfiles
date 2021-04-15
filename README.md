@@ -9,6 +9,7 @@ Upload Files:
 * Brew / App List
 * Gem
 * Pip
+* npm
 * Alfred
 * `default writes` commands
 * iTerm2
@@ -19,6 +20,9 @@ Upload Files:
 * Fonts
 * PATH
 * Launchd
+* terminal color scheme
+* fzf
+* .scripts
 
 Write Wiki:
 * Hammerspoon
@@ -27,3 +31,4 @@ Write Wiki:
 * Emacs Config
 * Vim Config
 * Tmux
+* p10k
