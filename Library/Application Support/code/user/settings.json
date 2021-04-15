@@ -1,0 +1,226 @@
+{
+    "files.autoSave": "onFocusChange",
+    "terminal.external.osxExec": "iTerm.app",
+    "editor.fontLigatures": "'ss04', 'ss07', 'zero'",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "editor.tabSize": 2,
+    "vim.neovimPath": "usr/local/bin/nvim",
+    "vim.enableNeovim": true,
+    "vim.easymotion": true,
+    "vim.useSystemClipboard": true,
+    "vim.statusBarColorControl": true,
+    "vim.sneak": true,
+    "vim.sneakReplacesF": true,
+    "vim.sneakUseIgnorecaseAndSmartcase": true,
+    "vim.smartRelativeLine": true,
+    "vim.showMarksInGutter": true,
+    "vim.gdefault": true,
+    "vim.camelCaseMotion.enable": true,
+    "vim.replaceWithRegister": true,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#005f5f",
+        "statusBar.noFolderBackground": "#005f5f",
+        "statusBar.debuggingBackground": "#005f5f"
+    },
+    "prettier.useTabs": true,
+    "python.autoComplete.addBrackets": true,
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.cursorBlinking": true,
+    "workbench.preferredDarkColorTheme": "Wal Bordered",
+    "workbench.preferredHighContrastColorTheme": "Wal Bordered",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.editor.closeOnFileDelete": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.revealIfOpen": true,
+    "editor.cursorBlinking": "phase",
+    "editor.fontFamily": "FiraCode Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+    "vim.cursorStylePerMode.insert": "line",
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.cursorStylePerMode.replace": "underline",
+    "vim.cursorStylePerMode.visual": "block-outline",
+    "vim.cursorStylePerMode.visualblock": "block-outline",
+    "vim.cursorStylePerMode.visualline": "block-outline",
+    "vim.foldfix": true,
+    "vim.handleKeys": {
+        "<C-d>": true
+    },
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "<C-j>"
+            ],
+            "after": [
+                "d",
+                "d",
+                "p"
+            ]
+        },
+        {
+            "before": [
+                "<C-k>"
+            ],
+            "after": [
+                "d",
+                "d",
+                "k",
+                "P"
+            ]
+        },
+        {
+            "before": [
+                "<C-h>"
+            ],
+            "after": [
+                "y",
+                "y",
+                "p"
+            ]
+        },
+        {
+            "before": [
+                "<C-l>"
+            ],
+            "after": [
+                "y",
+                "y",
+                "k",
+                "P"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                "<C-j>"
+            ],
+            "after": [
+                "d",
+                "p"
+            ]
+        },
+        {
+            "before": [
+                "<C-k>"
+            ],
+            "after": [
+                "d",
+                "k",
+                "P"
+            ]
+        },
+        {
+            "before": [
+                "<C-h>"
+            ],
+            "after": [
+                "y",
+                "p"
+            ]
+        },
+        {
+            "before": [
+                "<C-l>"
+            ],
+            "after": [
+                "y",
+                "k",
+                "P"
+            ]
+        }
+    ],
+    "C_Cpp.vcFormat.newLine.beforeElse": false,
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.lambda": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.namespace": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
+    "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyFunction": true,
+    "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyType": true,
+    "C_Cpp.vcFormat.indent.accessSpecifiers": true,
+    "C_Cpp.vcFormat.indent.caseContentsWhenBlock": true,
+    "C_Cpp.vcFormat.indent.caseLabels": true,
+    "C_Cpp.vcFormat.space.pointerReferenceAlignment": "right",
+    "C_Cpp.clang_format_style": "Visual Studio",
+    "C_Cpp.default.intelliSenseMode": "macos-gcc-x64",
+    "C_Cpp.formatting": "vcFormat",
+    "C_Cpp.vcFormat.space.afterKeywordsInControlFlowStatements": false,
+    "C_Cpp.vcFormat.space.beforeBlockOpenBrace": false,
+    "C_Cpp.vcFormat.space.withinInitializerListBraces": false,
+    "vim.hlsearch": true,
+    "C_Cpp.updateChannel": "Insiders",
+    "synthwave84.brightness": 1.0,
+    "editor.renderControlCharacters": true,
+    "workbench.colorTheme": "Nord",
+    "todo-tree.tree.showScanModeButton": false,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.hover.delay": 0,
+    "editor.lineNumbers": "relative",
+    "editor.smoothScrolling": true,
+    "editor.tabCompletion": "on",
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.size": "fit",
+    "editor.quickSuggestions": true,
+    "editor.quickSuggestionsDelay": 0,
+    "editor.suggest.showStatusBar": true,
+    "files.autoGuessEncoding": true,
+    "workbench.hover.delay": 0,
+    "workbench.list.smoothScrolling": true,
+    "workbench.panel.opensMaximized": "always",
+    "workbench.sash.hoverDelay": 0,
+    "workbench.editor.enablePreviewFromCodeNavigation": true,
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "zenMode.fullScreen": false,
+    "window.nativeFullScreen": false,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "python.pythonPath": "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python",
+    "search.seedWithNearestWord": true,
+    "search.showLineNumbers": true,
+    "search.smartCase": true,
+    "search.seedOnFocus": true,
+    "search.searchEditor.reusePriorSearchConfiguration": true,
+    "search.quickOpen.includeSymbols": true,
+    "telemetry.enableTelemetry": false,
+    "vim.changeWordIncludesWhitespace": true,
+    "vim.highlightedyank.enable": true,
+    "vim.leader": " ",
+    "vim.visualstar": true,
+    "better-comments.highlightPlainText": true,
+    "editor.semanticHighlighting.enabled": true,
+    "Lua.telemetry.enable": true,
+    "cSpell.enableFiletypes": [
+        "lua"
+    ],
+    "cSpell.userWords": [
+        "Fira",
+        "Hammerspoon",
+        "Yabai",
+        "askpass",
+        "emacsclient",
+        "fullscreen",
+        "keycombo",
+        "privs",
+        "submenu"
+    ],
+    "editor.fontSize": 14,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)"
+}
