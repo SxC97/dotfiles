@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+source "$(ls ~/color-scripts/color-scripts | shuf -n1)"
