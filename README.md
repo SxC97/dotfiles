@@ -9,6 +9,8 @@ Todo:
 * Oh-My-ZSH
 * Karabiner
 * Brew
+* Gem
+* Pip
 * App List
 * Alfred
 * `default writes` commands
