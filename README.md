@@ -14,10 +14,7 @@ Upload Files:
 * Firefox
 * MacForge
 * Fonts
-* PATH
 * Launchd
-* fzf
-* mpd
 * .scripts
 
 Write Wiki:
