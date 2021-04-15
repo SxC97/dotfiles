@@ -21,3 +21,5 @@ Todo:
 * Firefox
 * MacForge
 * Fonts
+* PATH
+* Launchd
