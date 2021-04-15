@@ -10,12 +10,10 @@ Upload Files:
 * Alfred
 * `default writes` commands
 * iTerm2 + color schemes
-* Swiftbar
 * Firefox
 * MacForge
 * Fonts
 * Launchd
-* .scripts
 
 Write Wiki:
 * Hammerspoon
@@ -27,3 +25,4 @@ Write Wiki:
 * p10k
 * VSC Config + Extensions
 * Übersicht Widgets
+* Swiftbar
