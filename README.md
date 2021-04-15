@@ -3,7 +3,6 @@
 Todo
 
 Upload Files:
-* Emacs Config
 * Vim Config
 * VSC Config
 * TMUX Config
@@ -26,3 +25,4 @@ Write Wiki:
 * Hammerspoon
 * Karabiner
 * Safari
+* Emacs Config
