@@ -1,25 +1,28 @@
 # My-MacOS
 
-Todo:
-* Hammerspoon
+Todo
+
+Upload Files:
 * Emacs Config
 * Vim Config
 * VSC Config
 * TMUX Config
 * Oh-My-ZSH
-* Karabiner
-* Brew
+* Brew / App List
 * Gem
 * Pip
-* App List
 * Alfred
 * `default writes` commands
 * iTerm2
 * Swiftbar
 * Übersicht Widgets
-* Safari
 * Firefox
 * MacForge
 * Fonts
 * PATH
 * Launchd
+
+Write Wiki:
+* Hammerspoon
+* Karabiner
+* Safari
