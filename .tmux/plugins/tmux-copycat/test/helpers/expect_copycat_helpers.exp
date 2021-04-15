@@ -1,0 +1,53 @@
+# a set of tmux specific helpers
+
+proc tmux_ctrl_f {} {
+  send ""
+  sleep 0.7
+}
+
+proc tmux_ctrl_d {} {
+  send ""
+  sleep 0.7
+}
+
+proc tmux_ctrl_u {} {
+  send ""
+  sleep 0.7
+}
+
+proc tmux_ctrl_r {} {
+  send ""
+  sleep 0.7
+}
+
+proc tmux_ctrl_g {} {
+  send ""
+  sleep 0.7
+}
+
+proc tmux_alt_h {} {
+  send "h"
+  sleep 0.7
+}
+
+proc tmux_ctrl_t {} {
+  send ""
+  sleep 0.7
+}
+
+proc search {text} {
+  send "/"
+  sleep 0.5
+  send "$text\r"
+  sleep 0.7
+}
+
+proc next_match {} {
+  send "n"
+  sleep 0.7
+}
+
+proc previous_match {} {
+  send "N"
+  sleep 0.7
+}

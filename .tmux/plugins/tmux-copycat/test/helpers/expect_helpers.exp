@@ -1,0 +1,149 @@
+# a set of expect helpers
+
+# basic setup for each script
+proc expect_setup {} {
+  # disables script output
+  log_user 0
+  # standard timeout
+  set timeout 5
+}
+
+proc exit_status_false {} {
+  global exit_status
+  set exit_status 1
+}
+
+proc sync_tmux {} {
+  sleep 1.5
+}
+
+proc sync_irb {} {
+  sleep 5.0
+}
+
+proc teardown_and_exit {} {
+  global exit_status
+  _kill_tmux_server
+  exit $exit_status
+}
+
+proc create_output {} {
+  # `yes` command just outputs `yes`
+  send "yes\r"
+  sleep 0.1
+  # stop `yes` command
+  send ""
+  sync_tmux
+}
+
+proc clear_screen {} {
+  send ""
+  sync_tmux
+}
+
+proc display_text {text} {
+  send "echo $text\r"
+  sync_tmux
+}
+
+proc new_tmux_pane {} {
+  sleep 0.3
+  send "c"
+  sleep 1.0
+}
+
+proc enter_irb {} {
+  send "irb\r"
+  sync_irb
+}
+
+proc exit_irb {} {
+  send "\r"
+  sync_irb
+  send "exit\r"
+  sync_tmux
+}
+
+proc irb_display_text {text} {
+  send "puts '$text'\r"
+  sync_irb
+}
+
+# Generates random output just to fill the screen.
+proc irb_generate_output {} {
+  send "puts 'output\n' * 200\r"
+  sync_irb
+}
+
+proc enter_test_git_repo {} {
+  sync_tmux
+  send "cd ~/tmux-example-plugin\r"
+  sync_tmux
+  send "git checkout --quiet tags/v0.0.1\r"
+  sync_tmux
+}
+
+proc git_status {} {
+  sync_tmux
+  send "git status --short\r"
+  sync_tmux
+}
+
+proc git_log_reverse_short {} {
+  sync_tmux
+  send "git --no-pager log --reverse --oneline -1\r"
+  sync_tmux
+}
+
+proc git_log_reverse {} {
+  sync_tmux
+  send "git --no-pager log --reverse -1\r"
+  sync_tmux
+}
+
+proc git_checkout {} {
+  sync_tmux
+  send "git checkout -- .\r"
+  sync_tmux
+}
+
+proc git_clean_fd {} {
+  sync_tmux
+  send "git clean -f -d\r"
+  sync_tmux
+}
+
+proc clean_git_repo {} {
+  git_checkout
+  git_clean_fd
+}
+
+proc change_file {file} {
+  sync_tmux
+  send "echo 'change' > $file\r"
+  sync_tmux
+}
+
+proc create_new_file_in_repo {} {
+  sync_tmux
+  send "echo 'text' >> new_file.txt\r"
+  sync_tmux
+}
+
+proc remove_test_git_repo {} {
+  sync_tmux
+  send "cd ~\r"
+  sync_tmux
+  send "rm -rf ~/tmux_example_plugin/\r"
+  sync_tmux
+}
+
+# private functions
+
+proc _kill_tmux_server {} {
+  send ""
+  sync_tmux
+  send "tmux kill-server\r"
+  sync_tmux
+}
+
