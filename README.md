@@ -3,17 +3,15 @@
 Todo
 
 Upload Files:
-* Brew / App List
+* Brew / App List / Fonts
 * Gem
 * Pip
 * npm
 * Alfred
 * `default writes` commands
 * iTerm2 + color schemes
-* Firefox
+* Firefox Extensions + Themes
 * MacForge
-* Fonts
-* Launchd
 
 Write Wiki:
 * Hammerspoon
@@ -26,3 +24,5 @@ Write Wiki:
 * VSC Config + Extensions
 * Übersicht Widgets
 * Swiftbar
+* .Scripts
+* Launchd
