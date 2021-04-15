@@ -3,16 +3,13 @@
 Todo
 
 Upload Files:
-* VSC Config
-* TMUX Config
-* Oh-My-ZSH
 * Brew / App List
 * Gem
 * Pip
 * npm
 * Alfred
 * `default writes` commands
-* iTerm2
+* iTerm2 + color schemes
 * Swiftbar
 * Übersicht Widgets
 * Firefox
@@ -20,7 +17,6 @@ Upload Files:
 * Fonts
 * PATH
 * Launchd
-* terminal color scheme
 * fzf
 * .scripts
 
@@ -32,3 +28,4 @@ Write Wiki:
 * Vim Config
 * Tmux
 * p10k
+* VSC Config + Extensions
