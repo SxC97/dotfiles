@@ -9,6 +9,7 @@ Upload Files:
 * npm
 * Alfred
 * `default writes` commands
+* Backup script
 * iTerm2 + color schemes
 * Firefox Extensions + Themes
 * MacForge
