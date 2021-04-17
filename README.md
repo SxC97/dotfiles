@@ -8,6 +8,8 @@ Upload Files:
 * Pip
 * npm
 * Alfred
+* Better Touch Tool
+* Keyboard Maestro
 * `default writes` commands
 * Backup script
 * iTerm2 + color schemes
