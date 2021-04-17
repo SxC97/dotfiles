@@ -7,14 +7,8 @@ Upload Files:
 * Gem
 * Pip
 * npm
-* Alfred
-* Better Touch Tool
-* Keyboard Maestro
 * `default writes` commands
 * Backup script
-* iTerm2 + color schemes
-* Firefox Extensions + Themes
-* MacForge
 
 Write Wiki:
 * Hammerspoon
@@ -29,3 +23,9 @@ Write Wiki:
 * Swiftbar
 * .Scripts
 * Launchd
+* Alfred
+* Better Touch Tool
+* Keyboard Maestro
+* iTerm2 + color schemes
+* Firefox Extensions + Themes
+* MacForge
