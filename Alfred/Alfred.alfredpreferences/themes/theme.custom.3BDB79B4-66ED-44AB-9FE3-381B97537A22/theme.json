@@ -1,0 +1,64 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 8,
+      "subtext" : {
+        "size" : 12,
+        "colorSelected" : "#D8DEE9FF",
+        "font" : "Fira Code Retina",
+        "color" : "#D8DEE9FF"
+      },
+      "shortcut" : {
+        "size" : 12,
+        "colorSelected" : "#D8DEE9FF",
+        "font" : "System Light",
+        "color" : "#D8DEE9FF"
+      },
+      "backgroundSelected" : "#4C5669FF",
+      "text" : {
+        "size" : 18,
+        "colorSelected" : "#D8DEE9FF",
+        "font" : "Fira Code Retina",
+        "color" : "#D8DEE9FF"
+      },
+      "iconPaddingHorizontal" : 12,
+      "roundness" : 1,
+      "paddingVertical" : 4,
+      "iconSize" : 24
+    },
+    "search" : {
+      "backgroundSelected" : "#4C5669FF",
+      "paddingHorizontal" : 8,
+      "spacing" : 4,
+      "text" : {
+        "size" : 32,
+        "colorSelected" : "#D8DEE9FF",
+        "font" : "Fira Code Retina",
+        "color" : "#DFE3ECFF"
+      },
+      "background" : "#2E3440FF",
+      "roundness" : 3,
+      "paddingVertical" : 4
+    },
+    "window" : {
+      "color" : "#2E3440FF",
+      "paddingHorizontal" : 0,
+      "width" : 1024,
+      "borderPadding" : 8,
+      "borderColor" : "#2E3440FF",
+      "blur" : 0,
+      "roundness" : -43,
+      "paddingVertical" : 4
+    },
+    "credit" : "Shrey Choudhary",
+    "separator" : {
+      "color" : "#2E3440FF",
+      "thickness" : 14
+    },
+    "scrollbar" : {
+      "color" : "#4C5669FF",
+      "thickness" : 6
+    },
+    "name" : "Big Nord"
+  }
+}

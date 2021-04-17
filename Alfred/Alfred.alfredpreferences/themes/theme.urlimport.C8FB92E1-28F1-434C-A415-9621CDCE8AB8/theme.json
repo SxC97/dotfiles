@@ -1,0 +1,61 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 8,
+      "subtext" : {
+        "size" : 11,
+        "colorSelected" : "#A0A3A8FF",
+        "font" : "JetBrains Mono",
+        "color" : "#5E5E5EFF"
+      },
+      "shortcut" : {
+        "size" : 20,
+        "colorSelected" : "#999999FF",
+        "font" : "JetBrains Mono",
+        "color" : "#3F3F3FFF"
+      },
+      "backgroundSelected" : "#1F1F1FFF",
+      "text" : {
+        "size" : 24,
+        "colorSelected" : "#CCCCCCFF",
+        "font" : "JetBrains Mono",
+        "color" : "#5E5E5EFF"
+      },
+      "iconPaddingHorizontal" : 5,
+      "paddingVertical" : 8,
+      "iconSize" : 40
+    },
+    "search" : {
+      "paddingVertical" : 2,
+      "background" : "#1F1F1FFF",
+      "spacing" : 10,
+      "text" : {
+        "size" : 36,
+        "colorSelected" : "#000000FF",
+        "font" : "JetBrains Mono",
+        "color" : "#E0E0E0FF"
+      },
+      "backgroundSelected" : "#1D6488FF"
+    },
+    "window" : {
+      "color" : "#1F1F1FFF",
+      "paddingHorizontal" : 0,
+      "width" : 1024,
+      "borderPadding" : 62,
+      "borderColor" : "#19191900",
+      "blur" : 0,
+      "roundness" : -64,
+      "paddingVertical" : 10
+    },
+    "credit" : "Nikita Voloboev",
+    "separator" : {
+      "color" : "#1F1F1FFF",
+      "thickness" : 1
+    },
+    "scrollbar" : {
+      "color" : "#3A3A3AFF",
+      "thickness" : 2
+    },
+    "name" : "Monokai Night"
+  }
+}

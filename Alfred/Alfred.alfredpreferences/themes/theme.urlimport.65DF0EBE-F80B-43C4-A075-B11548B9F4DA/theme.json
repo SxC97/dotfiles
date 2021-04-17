@@ -1,0 +1,64 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 8,
+      "subtext" : {
+        "size" : 12,
+        "colorSelected" : "#3B4153FF",
+        "font" : "Fira Code Retina",
+        "color" : "#D8DEE9FF"
+      },
+      "shortcut" : {
+        "size" : 12,
+        "colorSelected" : "#D8DEE9FF",
+        "font" : "System Light",
+        "color" : "#D8DEE9FF"
+      },
+      "backgroundSelected" : "#81A1C1FF",
+      "text" : {
+        "size" : 18,
+        "colorSelected" : "#3B4153FF",
+        "font" : "Fira Code Retina",
+        "color" : "#D8DEE9FF"
+      },
+      "iconPaddingHorizontal" : 12,
+      "roundness" : 1,
+      "paddingVertical" : 4,
+      "iconSize" : 24
+    },
+    "search" : {
+      "backgroundSelected" : "#81A1C1FF",
+      "paddingHorizontal" : 8,
+      "spacing" : 4,
+      "text" : {
+        "size" : 32,
+        "colorSelected" : "#3B4153FF",
+        "font" : "Fira Code Retina",
+        "color" : "#DFE3ECFF"
+      },
+      "background" : "#2C3241FF",
+      "roundness" : 3,
+      "paddingVertical" : 4
+    },
+    "window" : {
+      "color" : "#2C3241FF",
+      "paddingHorizontal" : 0,
+      "width" : 1024,
+      "borderPadding" : 8,
+      "borderColor" : "#2C3241FF",
+      "blur" : 0,
+      "roundness" : -43,
+      "paddingVertical" : 4
+    },
+    "credit" : "David Zhang",
+    "separator" : {
+      "color" : "#2C3241FF",
+      "thickness" : 14
+    },
+    "scrollbar" : {
+      "color" : "#81AFC1FF",
+      "thickness" : 6
+    },
+    "name" : "Nord"
+  }
+}

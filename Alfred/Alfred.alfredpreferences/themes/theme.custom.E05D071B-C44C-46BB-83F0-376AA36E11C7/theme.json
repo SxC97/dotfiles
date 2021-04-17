@@ -1,0 +1,64 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 6,
+      "subtext" : {
+        "size" : 12,
+        "colorSelected" : "#7F7F7FCB",
+        "font" : "JetBrains Mono Regular Nerd Font Complete Mono",
+        "color" : "#7F7F7F7F"
+      },
+      "shortcut" : {
+        "size" : 20,
+        "colorSelected" : "#E2E2E2FF",
+        "font" : "JetBrains Mono Regular Nerd Font Complete Mono",
+        "color" : "#7F7F7F59"
+      },
+      "backgroundSelected" : "#1D6488FF",
+      "text" : {
+        "size" : 24,
+        "colorSelected" : "#E2E2E2E8",
+        "font" : "JetBrains Mono Regular Nerd Font Complete Mono",
+        "color" : "#E2E2E2FF"
+      },
+      "iconPaddingHorizontal" : 11,
+      "roundness" : 20,
+      "paddingVertical" : 4,
+      "iconSize" : 32
+    },
+    "search" : {
+      "background" : "#242424FF",
+      "paddingVertical" : 4,
+      "spacing" : 2,
+      "text" : {
+        "size" : 42,
+        "colorSelected" : "#E2E2E2FF",
+        "font" : "JetBrains Mono Regular Nerd Font Complete Mono",
+        "color" : "#E2E2E2FF"
+      },
+      "roundness" : 20,
+      "backgroundSelected" : "#144863FF"
+    },
+    "window" : {
+      "color" : "#242424FF",
+      "paddingHorizontal" : 10,
+      "width" : 1024,
+      "borderPadding" : 0,
+      "borderColor" : "#202020FF",
+      "blur" : 0,
+      "roundness" : 20,
+      "paddingVertical" : 10
+    },
+    "credit" : "Shrey Choudhary",
+    "visualEffectMode" : 2,
+    "separator" : {
+      "color" : "#CBCBCB00",
+      "thickness" : 10
+    },
+    "scrollbar" : {
+      "color" : "#1D6488FF",
+      "thickness" : 8
+    },
+    "name" : "Modern Avenir"
+  }
+}
