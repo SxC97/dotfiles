@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>autoExpandRestoreClipboardAfter</key>
+	<real>1</real>
+	<key>autoExpandSnippetPlaySound</key>
+	<false/>
+	<key>autoExpandSnippetTriggerPlaySound</key>
+	<false/>
+	<key>autoExpandSnippetsExcludedApps</key>
+	<array/>
+	<key>hotkey</key>
+	<dict>
+		<key>key</key>
+		<integer>9</integer>
+		<key>mod</key>
+		<integer>524288</integer>
+		<key>string</key>
+		<string>V</string>
+	</dict>
+	<key>snippetMatchFields</key>
+	<integer>1</integer>
+	<key>viewerKeyword</key>
+	<string>cb</string>
+</dict>
+</plist>
