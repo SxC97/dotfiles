@@ -127,7 +127,7 @@ alias ncon="nvim ~/.config/neofetch/config.conf"
 alias r='exec zsh'
 alias l='lsd --group-dirs first -AF'
 alias ll='lsd --group-dirs first -A --long'
-alias u='update_packages&'
+alias u='update_packages'
 alias yr='launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai" && sudo yabai --load-sa'
 alias v='nvim'
 alias c='clear'
@@ -147,7 +147,12 @@ alias reboot-cluster='ssh node1 "sudo reboot"; ssh node2 "sudo reboot"; ssh node
 alias cluster='tmuxinator start cluster'
 alias new-cluster='tmux kill-server && tmuxinator start cluster'
 alias dp='displayplacer "id:E7761DAE-4EF7-7864-8FCA-BDC24450055D res:1920x1080 hz:60 color_depth:8 scaling:on origin:(0,0) degree:0" "id:F0CEEAA5-1207-C5E2-7D55-245FA844CEA1 res:1080x1920 hz:60 color_depth:8 scaling:on origin:(1920,-423) degree:270"'
-alias rebb='open -gj "swiftbar://refreshPlugin?name=Package"'
+alias sstop='brew services stop skhd'
+alias ystop='brew services stop yabai'
+alias sstart='brew services start skhd'
+alias ystart='brew services start yabai'
+alias destop='ystop;sstop'
+alias destart='ystart;sstart'
 
 # . "~/.cache/wal/colors.sh"
 
@@ -158,7 +163,7 @@ function pywal {
 }
 
 function update_packages() {
-    brew update && brew upgrade && brew upgrade --cask; 
+    brew update && brew upgrade && brew upgrade --cask;
     #npm update;
     #yarn upgrade;
     #apm update && apm upgrade;
@@ -219,3 +224,11 @@ clear
 # neofetch
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+function brew() {
+  command brew "$@"
+
+  if [[ $* =~ "upgrade" ]]; then
+    sketchybar -m --trigger brew_upgrade
+  fi
+}
