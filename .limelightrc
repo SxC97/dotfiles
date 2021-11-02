@@ -1,6 +1,9 @@
+# pywal scheme - update if needed
+# source ~/.cache/wal/colors.sh
+
 limelight -m config debug_output on
 limelight -m config placement interior
-limelight -m config width 3
-limelight -m config radius 1.0
+limelight -m config width 2
+limelight -m config radius 0.0
 limelight -m config active_color 0xFFBF616A
 limelight -m config normal_color 0xFF81A1C1
