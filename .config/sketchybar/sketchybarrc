@@ -1,0 +1,368 @@
+#                          ﱦ 齃     ﮂ  ﵁ 爵        ﭵ     ﱦ  ﰊ 異 ﴱ אַ  'Y⃣'
+
+############## BAR ##############
+sketchybar -m --bar height=25 \
+                    blur_radius=0 \
+                    position=top \
+                    padding_left=5 \
+                    padding_right=5 \
+                    margin=0 \
+                    corner_radius=0 \
+                    color=0xff2E3440 \
+                    border_width=0 \
+                    border_color=0xff2E3440
+
+############## GLOBAL DEFAULTS ##############
+sketchybar -m --default updates=when_shown \
+                        drawing=on \
+                        cache_scripts=on \
+                        icon.font="FuraCode Nerd Font:Regular:10.0" \
+                        icon.color=0xffECEFF4 \
+                        icon.highlight_color=0xffA3BE8C \
+                        label.font="FuraCode Nerd Font:Regular:10.0" \
+                        label.color=0xffECEFF4
+
+############## SPACE DEFAULTS ##############
+sketchybar -m --default label.padding_left=0 \
+                        label.padding_right=0 \
+                        icon.padding_left=6 \
+                        icon.padding_right=6
+
+sketchybar -m --add item logo left \
+              --set logo icon= \
+                    background.color=0xffBF616A \
+                    background.height=20 \
+                    background.padding_right=0 \
+                    click_script="sketchybar -m --update"
+
+############## PRIMARY DISPLAY SPACES ##############
+sketchybar -m --add space productivity left \
+              --set productivity associated_space=1 \
+                         associated_display=1 \
+                         icon= \
+                         click_script="yabai -m space --focus 1" \
+                         background.color=0xffD8DEE9 \
+                         background.drawing=off \
+              --subscribe productivity mouse.entered mouse.exited \
+                                                                 \
+              --add space browser left \
+              --set browser associated_display=1 \
+                         associated_space=2 \
+                         icon=爵 \
+                         click_script="yabai -m space --focus 2" \
+                         background.color=0xffD8DEE9 \
+                         background.drawing=off \
+              --subscribe browser mouse.entered mouse.exited \
+                                                                 \
+              --add space messaging left \
+              --set messaging associated_display=1 \
+                         associated_space=3 \
+                         icon= \
+                         click_script="yabai -m space --focus 3" \
+                         background.color=0xffD8DEE9 \
+                         background.drawing=off \
+              --subscribe messaging mouse.entered mouse.exited \
+                                                                 \
+              --add space reference left \
+              --set reference associated_display=1 \
+                         associated_space=4 \
+                         icon= \
+                         click_script="yabai -m space --focus 4" \
+                         background.color=0xffD8DEE9 \
+                         background.drawing=off \
+              --subscribe reference mouse.entered mouse.exited \
+                                                                 \
+              --add space code left \
+              --set code associated_display=1 \
+                         associated_space=5 \
+                         icon= \
+                         click_script="yabai -m space --focus 5" \
+                         background.color=0xffD8DEE9 \
+                         background.drawing=off \
+              --subscribe code mouse.entered mouse.exited \
+                                                                 \
+              --add space media left \
+              --set media associated_display=1 \
+                         associated_space=6 \
+                         icon= \
+                         click_script="yabai -m space --focus 6" \
+                         background.color=0xffD8DEE9 \
+                         background.drawing=off \
+              --subscribe media mouse.entered mouse.exited \
+                                                                 \
+              --add space feed left \
+              --set feed associated_display=1 \
+                         associated_space=7 \
+                         icon= \
+                         click_script="yabai -m space --focus 7" \
+                         background.color=0xffD8DEE9 \
+                         background.drawing=off \
+              --subscribe feed mouse.entered mouse.exited \
+                                                                 \
+              --add space system left \
+              --set system associated_display=1 \
+                         associated_space=8 \
+                         icon= \
+                         click_script="yabai -m space --focus 8" \
+                         background.color=0xffD8DEE9 \
+                         background.drawing=off \
+              --subscribe system mouse.entered mouse.exited \
+                                                                 \
+              --add space vm left \
+              --set vm associated_display=1 \
+                         associated_space=9 \
+                         icon= \
+                         click_script="yabai -m space --focus 9" \
+                         background.color=0xffD8DEE9 \
+                         background.drawing=off \
+              --subscribe vm mouse.entered mouse.exited
+
+sketchybar -m --add item yabai_logo left \
+              --set yabai_logo icon="" \
+                               background.color=0xffD08770 \
+                               background.height=20 \
+                               background.padding_left=5 \
+                               icon.font="FuraCode Nerd Font:Regular:10.0"
+
+sketchybar -m --add item yabai_mode left \
+              --add event mode_change \
+              --set yabai_mode update_freq=3 \
+                               script="~/.config/sketchybar/plugins/yabai_mode.sh" \
+                               click_script="~/.config/sketchybar/plugins/yabai_mode_click.sh" \
+              --subscribe yabai_mode space_change mode_change
+
+sketchybar -m --add item yabai_float left \
+              --add event window_focus \
+              --add event float_change \
+              --set yabai_float script="~/.config/sketchybar/plugins/yabai_float.sh" \
+                    click_script="~/.config/sketchybar/plugins/yabai_float_click.sh" \
+                    lazy=off \
+              --subscribe yabai_float front_app_switched window_focus float_change \
+
+############## ITEM DEFAULTS ###############
+sketchybar -m --default label.padding_left=0 \
+                        icon.padding_right=3 \
+                        icon.padding_left=6 \
+                        label.padding_right=3
+
+############## RIGHT ITEMS ##############
+
+sketchybar -m --add item battery right \
+              --set battery update_freq=3 \
+                            script="~/.config/sketchybar/plugins/power.sh" \
+                            icon= \
+                            background.color=0xff3B4252 \
+                            background.height=20
+
+sketchybar -m --add item power_logo right \
+              --set power_logo icon=⏻ \
+                    background.color=0xffB48EAD \
+                    background.height=20 \
+                    background.padding_left=5
+
+sketchybar -m --add item clock right \
+              --set clock update_freq=1 \
+                          script="~/.config/sketchybar/plugins/clock.sh" \
+                          background.color=0xff3B4252 \
+                          background.height=20 \
+
+sketchybar -m --add item clock_logo right\
+              --set clock_logo icon= \
+                               background.color=0xff5E81AC \
+                               background.height=20 \
+                               background.padding_left=5
+
+sketchybar -m --add item brightness right \
+              --set brightness script="~/.config/sketchybar/plugins/brightness.sh" \
+                               background.color=0xff3B4252 \
+                               background.height=20 \
+                               update_freq=1
+
+sketchybar -m --add item brightness_logo right \
+              --set brightness_logo icon= \
+                                    background.color=0xffEBCB8B \
+                                    background.height=20 \
+                                    background.padding_left=5
+
+sketchybar -m --add item volume right \
+              --set volume script="~/.config/sketchybar/plugins/volume.sh" \
+                           background.color=0xff3B4252 \
+                           background.height=20 \
+                           update_freq=1
+
+sketchybar -m --add item volume_logo right \
+              --set volume_logo icon= \
+                        background.color=0xff81A1C1 \
+                        background.height=20 \
+                        background.padding_left=5
+
+sketchybar -m --add item net right \
+              --set net script="~/.config/sketchybar/plugins/net.sh" \
+                                background.color=0xff3B4252 \
+                                background.height=20
+
+sketchybar -m --add item net_logo right \
+              --set net_logo icon= \
+                        background.color=0xffB48EAD \
+                        background.height=20 \
+                        background.padding_left=5
+
+sketchybar -m --add event bluetooth_change "com.apple.bluetooth.status" \
+              --add item headphones right \
+              --set headphones script="~/.config/sketchybar/plugins/airpods_battery.sh" \
+              --subscribe headphones bluetooth_change
+
+sketchybar -m --add item disk_label right \
+              --set disk_label label.font="FuraCode Nerd Font:Regular:7.0" \
+                               label=SSD \
+                               y_offset=5 \
+                               width=0 \
+\
+              --add item disk_percentage right \
+              --set disk_percentage label.font="FuraCode Nerd Font:Regular:7.0" \
+                                    y_offset=-4 \
+                                    update_freq=1 \
+                                    script="~/.config/sketchybar/plugins/disk.sh"
+
+sketchybar -m --add item ram_label right \
+              --set ram_label label.font="FuraCode Nerd Font:Regular:7.0" \
+                               label=RAM \
+                               y_offset=5 \
+                               width=0 \
+\
+              --add item ram_percentage right \
+              --set ram_percentage label.font="FuraCode Nerd Font:Regular:7.0" \
+                                    y_offset=-4 \
+                                    update_freq=1 \
+                                    script="~/.config/sketchybar/plugins/ram.sh"
+
+sketchybar -m --add item cpu_label right \
+              --set cpu_label label.font="FuraCode Nerd Font:Regular:7.0" \
+                    label=CPU \
+                    y_offset=5 \
+                    width=0 \
+\
+              --add item cpu_percent right \
+              --set cpu_percent label.font="FuraCode Nerd Font:Regular:7.0" \
+                    y_offset=-4 \
+                    update_freq=1 \
+                    script="~/.config/sketchybar/plugins/cpu.sh"
+
+sketchybar -m --add item network_up right \
+              --set network_up label.font="FuraCode Nerd Font:Regular:7.0" \
+                               icon.font="FuraCode Nerd Font:Regular:7.0" \
+                               icon= \
+                               icon.highlight_color=0xff8b0a0d \
+                               y_offset=5 \
+                               width=0 \
+                               update_freq=1 \
+                               script="~/.config/sketchybar/plugins/network.sh" \
+\
+              --add item network_down right \
+              --set network_down label.font="FuraCode Nerd Font:Regular:7.0" \
+                                 icon.font="FuraCode Nerd Font:Regular:7.0" \
+                                 icon= \
+                                 icon.highlight_color=0xff10528c \
+                                 y_offset=-4 \
+                                 update_freq=1
+
+sketchybar -m --add item stats_logo right \
+              --set stats_logo icon= \
+                               icon.font="FuraCode Nerd Font:Regular:13.0" \
+                               background.color=0xffD08770 \
+                               background.height=20
+
+sketchybar -m --add item vpn right \
+              --set vpn icon= \
+                        icon.color=0xffA3BE8C \
+                        update_freq=5 \
+                        script="~/.config/sketchybar/plugins/vpn.sh"
+
+sketchybar -m --add item weather right \
+              --set weather update_freq=21600 \
+                            script="~/.config/sketchybar/plugins/weather.sh" \
+                            click_script="open https://darksky.net/forecast/30.098,-95.454/us12/en"
+
+sketchybar -m --add item packages right \
+              --set packages update_freq=1800 \
+                             script="~/.config/sketchybar/plugins/package_monitor.sh" \
+                             label= \
+                             lazy=off \
+                             background.color=0xff3B4252 \
+                             background.height=20
+
+sketchybar -m --add item messages right \
+              --set messages update_freq=60 \
+                             icon= \
+                             script="~/.config/sketchybar/plugins/messages.sh" \
+                             background.color=0xff3B4252 \
+                             background.height=20
+
+sketchybar -m --add alias Hammerspoon right \
+              --set Hammerspoon background.color=0xff3B4252 \
+                                background.height=20
+
+sketchybar -m --add item misc_logo right \
+              --set misc_logo icon= \
+                               icon.font="FuraCode Nerd Font:Regular:13.0" \
+                               background.color=0xffA3BE8C \
+                               background.height=20
+
+sketchybar -m --add event song_update com.apple.iTunes.playerInfo
+sketchybar -m --add item music_info left \
+              --set music_info script="~/.config/sketchybar/plugins/music.sh" \
+                               click_script="~/.config/sketchybar/plugins/music_click.sh" \
+              --subscribe music_info song_update
+
+############## BRACKETS ##############
+ sketchybar -m --add bracket primary_spaces productivity \
+                                            browser \
+                                            messaging \
+                                            reference \
+                                            code \
+                                            media \
+                                            feed \
+                                            system \
+                                            vm \
+  \
+               --set primary_spaces background.color=0xff3B4252 \
+                                    background.corner_radius=0 \
+                                    background.height=20
+
+ sketchybar -m --add bracket yabai yabai_mode \
+                                   yabai_float \
+\
+               --set yabai background.color=0xff3B4252 \
+                           background.corner_radius=0 \
+                           background.height=20
+
+ sketchybar -m --add bracket stats headphones \
+                                   disk_label \
+                                   disk_percentage \
+                                   ram_label \
+                                   ram_percentage \
+                                   cpu_label \
+                                   cpu_percent \
+                                   network_up \
+                                   network_down \
+\
+               --set stats background.color=0xff3B4252 \
+                           background.corner_radius=0 \
+                           background.height=20 \
+                           background.padding_left=5
+
+ sketchybar -m --add bracket misc Hammerspoon \
+                                  messages \
+                                  packages \
+                                  weather \
+                                  vpn \
+\
+               --set misc background.color=0xff3B4252 \
+                          background.height=20 \
+                          background.padding_left=5 \
+                          background.padding_right=0
+
+############## FINALIZING THE SETUP ##############
+sketchybar -m --update
+
+echo "sketchybar configuration loaded..."
