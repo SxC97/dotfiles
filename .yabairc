@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-sudo yabai --load-sa
+#sudo yabai --install-sa; sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
 # default management type for yabai on startup
@@ -10,13 +10,16 @@ yabai -m config layout bsp
 yabai -m config window_placement second_child
 
 # Set all padding and gaps to 0pt (default: 0)
-yabai -m config top_padding    24
+yabai -m config top_padding    0
 yabai -m config bottom_padding 0
 yabai -m config left_padding   0
 yabai -m config right_padding  0
-yabai -m config window_gap     0
+yabai -m config window_gap     10
+yabai -m config external_bar all:0:0
 
 yabai -m config insert_feedback_color   0x00BF616A
+
+yabai -m config window_animation_duration    0.01
 
 # Set window border off due to limelight integration
 yabai -m config window_border off
@@ -40,7 +43,7 @@ yabai -m config mouse_action2 resize
 yabai -m config mouse_drop_action stack
 
 # set focus follows mouse mode (default: off, options: off, autoraise, autofocus)
-yabai -m config focus_follows_mouse autofocus
+yabai -m config focus_follows_mouse autoraise
 
 # set mouse follows focus mode (default: off)
 yabai -m config mouse_follows_focus off
@@ -88,9 +91,9 @@ yabai -m rule --add app="Keyboard\ Maestro" space=^"OS"
 yabai -m rule --add app="Alfred\ Preferences" space=^"OS"
 
 yabai -m space 7 --label feed
-yabai -m rule --add app="Reeder" space=^"media"
-yabai -m rule --add app="HacKit" space=^"media"
-yabai -m rule --add app="Apollo" space=^"media"
+yabai -m rule --add app="Reeder" space=^"feed"
+yabai -m rule --add app="HacKit" space=^"feed"
+yabai -m rule --add app="Apollo" space=^"feed"
 
 yabai -m space 6 --label media
 yabai -m rule --add app="Music" space=^"media"
@@ -128,38 +131,34 @@ yabai -m rule --add app="TickTick" space=^"productivity"
 
 yabai -m signal --add event=window_focused action="sketchybar -m --trigger window_focus &> /dev/null"
 
-yabai -m signal --add event=space_changed action="source ~/.scripts/.hide_bar"
+# yabai -m signal --add event=space_changed action="source ~/.scripts/.hide_bar"
 
-yabai -m signal --add event=system_woke action="brew services restart sketchybar"
+# call .gaps functions
+yabai -m signal --add event=space_changed action="source ~/.scripts/.gaps"
+yabai -m signal --add event=window_created action="source ~/.scripts/.gaps"
+yabai -m signal --add event=window_destroyed action="source ~/.scripts/.gaps"
+yabai -m signal --add event=window_moved action="source ~/.scripts/.gaps"
+yabai -m signal --add event=application_visible action="source ~/.scripts/.gaps"
+yabai -m signal --add event=application_hidden action="source ~/.scripts/.gaps"
+yabai -m signal --add event=application_launched action="source ~/.scripts/.gaps"
+yabai -m signal --add event=application_terminated action="source ~/.scripts/.gaps"
+yabai -m signal --add event=display_changed action="source ~/.scripts/.gaps"
+yabai -m signal --add event=mission_control_exit action="source ~/.scripts/.gaps"
 
-# integrate with SwiftBar/Yabai-Spaces
-# yabai -m signal --add event=space_changed action="open -gj 'swiftbar://refreshplugin?name=yabai'"
-# yabai -m signal --add event=mission_control_exit action="open -gj 'swiftbar://refreshplugin?name=yabai'"
-# yabai -m signal --add event=display_added action="open -gj 'swiftbar://refreshplugin?name=yabai'"
-# yabai -m signal --add event=display_removed action="open -gj 'swiftbar://refreshplugin?name=yabai'"
-# yabai -m signal --add event=display_changed action="open -gj 'swiftbar://refreshplugin?name=yabai'"
-# yabai -m signal --add event=display_moved action="open -gj 'swiftbar://refreshplugin?name=yabai'"
-# yabai -m signal --add event=system_woke action="open -gj 'swiftbar://refreshplugin?name=yabai'"
-# yabai -m signal --add event=window_focused action="open -gj 'swiftbar://refreshplugin?name=yabai'"
-# yabai -m signal --add event=window_created action="open -gj 'swiftbar://refreshplugin?name=yabai'"
-# yabai -m signal --add event=window_destroyed action="open -gj 'swiftbar://refreshplugin?name=yabai'"
-# yabai -m signal --add event=window_minimized action="open -gj 'swiftbar://refreshplugin?name=yabai'"
-# yabai -m signal --add event=window_deminimized action="open -gj 'swiftbar://refreshplugin?name=yabai'"
-
-# call .script functions
-yabai -m signal --add event=space_changed action="source ~/.scripts/.gaps; source ~/.scripts/.uber; source ~/.scripts/.border"
-yabai -m signal --add event=window_created action="source ~/.scripts/.gaps; source ~/.scripts/.uber; source ~/.scripts/.border"
-yabai -m signal --add event=window_destroyed action="source ~/.scripts/.gaps; source ~/.scripts/.uber; source ~/.scripts/.border"
-yabai -m signal --add event=window_moved action="source ~/.scripts/.gaps; source ~/.scripts/.uber; source ~/.scripts/.border"
-yabai -m signal --add event=application_visible action="source ~/.scripts/.gaps; source ~/.scripts/.uber; source ~/.scripts/.border"
-yabai -m signal --add event=application_hidden action="source ~/.scripts/.gaps; source ~/.scripts/.uber; source ~/.scripts/.border"
-yabai -m signal --add event=application_launched action="source ~/.scripts/.gaps; source ~/.scripts/.uber; source ~/.scripts/.border"
-yabai -m signal --add event=application_terminated action="source ~/.scripts/.gaps; source ~/.scripts/.uber; source ~/.scripts/.border"
-yabai -m signal --add event=display_changed action="source ~/.scripts/.gaps; source ~/.scripts/.uber; source ~/.scripts/.border"
-yabai -m signal --add event=mission_control_exit action="source ~/.scripts/.gaps; source ~/.scripts/.uber; source ~/.scripts/.border"
+# call .border functions
+#yabai -m signal --add event=space_changed action="source ~/.scripts/.border"
+#yabai -m signal --add event=window_created action="source ~/.scripts/.border"
+#yabai -m signal --add event=window_destroyed action="source ~/.scripts/.border"
+#yabai -m signal --add event=window_moved action="source ~/.scripts/.border"
+#yabai -m signal --add event=application_visible action="source ~/.scripts/.border"
+#yabai -m signal --add event=application_hidden action="source ~/.scripts/.border"
+#yabai -m signal --add event=application_launched action="source ~/.scripts/.border"
+#yabai -m signal --add event=application_terminated action="source ~/.scripts/.border"
+#yabai -m signal --add event=display_changed action="source ~/.scripts/.border"
+#yabai -m signal --add event=mission_control_exit action="source ~/.scripts/.border"
 
 # Debug mode on
 yabai -m config debug_output on
 
 # Auto update yabai
-YABAI_CERT=yabai-cert sh -c "$(curl -fsSL "https://git.io/update-yabai")" &
+# YABAI_CERT=yabai-cert sh -c "$(curl -fsSL "https://git.io/update-yabai")" &
