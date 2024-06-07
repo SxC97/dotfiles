@@ -43,9 +43,7 @@ ctrl + alt - m : yabai -m window --swap stack.next || yabai -m window --swap sta
 # BACKSPACE
 
 # float / unfloat window and center on screen
-# ctrl + alt - backspace : yabai -m window --toggle float; yabai -m window --toggle border; yabai -m window --grid 4:4:1:1:2:2 && open -gj 'swiftbar://refreshplugin?name=yabai'
-ctrl + alt - backspace : yabai -m window --toggle float; yabai -m window --toggle border; yabai -m window --grid 4:4:1:1:2:2 && sketchybar -m --trigger float_change
-
+ctrl + alt - backspace : yabai -m window --toggle float; yabai -m window --toggle border; yabai -m window --grid 4:4:1:1:2:2; hs -c "hs.alert.show('Toggled Float')"
 
 # make floating window fill screen
 ctrl + shift - backspace : yabai -m window --grid 1:1:0:0:1:1
@@ -68,6 +66,7 @@ ctrl + alt + shift - return : yabai -m space --balance
 
 # make floating window fill left-half of screen
 ctrl + shift - v : yabai -m window --grid 1:2:0:0:1:1 || (yabai -m window --toggle float; yabai -m window --toggle border; yabai -m window --grid 1:2:0:0:1:1) && sketchybar -m --trigger float_change
+
 # make floating window fill right-half of screen
 ctrl + shift - b : yabai -m window --grid 1:2:1:1:1:1 || (yabai -m window --toggle float; yabai -m window --toggle border; yabai -m window --grid 1:2:1:1:1:1) && sketchybar -m --trigger float_change
 
@@ -77,8 +76,43 @@ ctrl + shift - n : yabai -m window --grid 2:1:0:0:1:1 || (yabai -m window --togg
 # make floating window fill bottom-half of screen
 ctrl + shift - m : yabai -m window --grid 2:1:0:1:1:1 || (yabai -m window --toggle float; yabai -m window --toggle border; yabai -m window --grid 1:2:1:1:1:1) && sketchybar -m --trigger float_change
 
-# Add thirds shortcuts?
+# horizontal thirds shortcuts
 
+# make floating window fill left-thirds of screen
+ctrl + alt - a : yabai -m window --grid 1:3:0:0:1:1 || (yabai -m window --toggle float; yabai -m window --toggle border; yabai -m window --grid 1:3:0:0:1:1) && sketchybar -m --trigger float_change
+
+# make floating window fill center-thirds of screen
+ctrl + alt - s : yabai -m window --grid 1:3:1:0:1:1 || (yabai -m window --toggle float; yabai -m window --toggle border; yabai -m window --grid 1:3:1:0:1:1) && sketchybar -m --trigger float_change
+
+# make floating window fill right-thirds of screen
+ctrl + alt - d : yabai -m window --grid 1:3:2:0:1:1 || (yabai -m window --toggle float; yabai -m window --toggle border; yabai -m window --grid 1:3:2:0:1:1) && sketchybar -m --trigger float_change
+
+# vertical thirds shortcuts
+
+# make floating window fill left-thirds of screen
+ctrl + shift - a : yabai -m window --grid 3:1:0:0:1:1 || (yabai -m window --toggle float; yabai -m window --toggle border; yabai -m window --grid 3:1:0:0:1:1) && sketchybar -m --trigger float_change
+
+# make floating window fill center-thirds of screen
+ctrl + shift - s : yabai -m window --grid 3:1:0:1:1:1 || (yabai -m window --toggle float; yabai -m window --toggle border; yabai -m window --grid 3:1:0:1:1:1) && sketchybar -m --trigger float_change
+
+# make floating window fill right-thirds of screen
+ctrl + shift - d : yabai -m window --grid 3:1:0:2:1:1 || (yabai -m window --toggle float; yabai -m window --toggle border; yabai -m window --grid 3:1:0:2:1:1) && sketchybar -m --trigger float_change
+
+# horizontal quarters
+
+# make floating window fill left-thirds of screen
+ctrl + alt + shift - a : yabai -m window --grid 1:4:0:0:1:1 || (yabai -m window --toggle float; yabai -m window --toggle border; yabai -m window --grid 1:4:0:0:1:1) && sketchybar -m --trigger float_change
+
+# make floating window fill center-thirds of screen
+ctrl + alt + shift - s : yabai -m window --grid 1:4:1:0:1:1 || (yabai -m window --toggle float; yabai -m window --toggle border; yabai -m window --grid 1:4:1:0:1:1) && sketchybar -m --trigger float_change
+
+# make floating window fill right-thirds of screen
+ctrl + alt + shift - d : yabai -m window --grid 1:4:2:0:1:1 || (yabai -m window --toggle float; yabai -m window --toggle border; yabai -m window --grid 1:4:2:0:1:1) && sketchybar -m --trigger float_change
+
+# make floating window fill right-thirds of screen
+ctrl + alt + shift - f : yabai -m window --grid 1:4:3:0:1:1 || (yabai -m window --toggle float; yabai -m window --toggle border; yabai -m window --grid 1:4:3:0:1:1) && sketchybar -m --trigger float_change
+
+# corner quarters shortcuts
 
 # make floating window fill top-right quarter of screen
 ctrl + alt + shift - v : yabai -m window --grid 2:2:1:0:1:1 || (yabai -m window --toggle float; yabai -m window --toggle border; yabai -m window --grid 1:2:1:1:1:1) && sketchybar -m --trigger float_change
@@ -101,8 +135,8 @@ ctrl + alt - 0x2A: yabai -m window --toggle split && sketchybar -m --trigger mod
 ctrl + shift - 0x2A : yabai -m window --toggle zoom-parent
 
 # toggle picture-in-picture '\'
-ctrl + alt + shift - 0x2A : yabai -m window --toggle sticky && sketchybar -m --trigger mode_change
-# ctrl + alt + shift - 0x2A : yabai -m window --toggle sticky; yabai -m window --toggle topmost; yabai -m window --toggle pip
+ctrl + alt + shift - 0x2A : yabai -m window --toggle sticky && sketchybar -m --trigger mode_change; hs -c "hs.alert.show('Sticky Mode Toggled')"
+
 
 # ;
 
@@ -158,19 +192,19 @@ ctrl + alt + shift - 0x1B : yabai -m space --gap rel:-5 && yabai -m space --padd
 
 # create desktop and follow focus - uses jq for parsing json (brew install jq)
 ctrl + alt - t : yabai -m space --create && \
-                index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
+                index="$(yabai -m query --spaces --display | jq 'map(select(."is-native-fullscreen" == false))[-1].index')" && \
                 yabai -m space --focus "${index}" && \
-                sketchybar -m --trigger space_change
+                sketchybar -m --trigger space_change && hs -c "hs.alert.show('New Space Created')"
 
 # create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
 ctrl + shift - t : yabai -m space --create && \
-                  index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
-                  yabai -m window --space "${index}" && \
-                  yabai -m space --focus "${index}" && \
-                  sketchybar -m --trigger space_change
+                index="$(yabai -m query --spaces --display | jq 'map(select(."is-native-fullscreen" == false))[-1].index')" && \
+                yabai -m window --space "${index}" && \
+                yabai -m space --focus "${index}" && \
+                sketchybar -m --trigger space_change && hs -c "hs.alert.show('Window Moved To New Space')"
 
 # destroy desktop
-ctrl + alt - w : yabai -m space --destroy && yabai -m window --focus recent && sketchybar -m --trigger space_change
+ctrl + alt - w : yabai -m space --destroy && yabai -m window --focus recent && sketchybar -m --trigger space_change && hs -c "hs.alert.show('Space Destroyed')"
 
 # focus a specific desktop (auto create desktops if it doesn't exist?)
 ctrl - 1 : yabai -m space --focus 1
@@ -197,28 +231,28 @@ ctrl + alt - 9 : yabai -m window --space 9 && yabai -m space --focus 9
 ctrl + alt - 0x32 : yabai -m window --space last && yabai -m space --focus 9
 
 # swap space with give space SKETCH
-ctrl + shift - 1 : yabai -m space --move 1 && sketchybar -m --trigger space_change
-ctrl + shift - 2 : yabai -m space --move 2 && sketchybar -m --trigger space_change
-ctrl + shift - 3 : yabai -m space --move 3 && sketchybar -m --trigger space_change
-ctrl + shift - 4 : yabai -m space --move 4 && sketchybar -m --trigger space_change
-ctrl + shift - 5 : yabai -m space --move 5 && sketchybar -m --trigger space_change
-ctrl + shift - 6 : yabai -m space --move 6 && sketchybar -m --trigger space_change
-ctrl + shift - 7 : yabai -m space --move 7 && sketchybar -m --trigger space_change
-ctrl + shift - 8 : yabai -m space --move 8 && sketchybar -m --trigger space_change
-ctrl + shift - 9 : yabai -m space --move 9 && sketchybar -m --trigger space_change
-ctrl + shift - 0x32 : yabai -m space --move last && sketchybar -m --trigger space_change
+ctrl + shift - 1 : yabai -m space --move 1 && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Swapped With Space 1')"
+ctrl + shift - 2 : yabai -m space --move 2 && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Swapped With Space 2')"
+ctrl + shift - 3 : yabai -m space --move 3 && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Swapped With Space 3')"
+ctrl + shift - 4 : yabai -m space --move 4 && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Swapped With Space 4')"
+ctrl + shift - 5 : yabai -m space --move 5 && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Swapped With Space 5')"
+ctrl + shift - 6 : yabai -m space --move 6 && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Swapped With Space 6')"
+ctrl + shift - 7 : yabai -m space --move 7 && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Swapped With Space 7')"
+ctrl + shift - 8 : yabai -m space --move 8 && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Swapped With Space 8')"
+ctrl + shift - 9 : yabai -m space --move 9 && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Swapped With Space 9')"
+ctrl + shift - 0x32 : yabai -m space --move last && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Swapped With Last Space')"
 
 # send window to specific display
-ctrl + alt + shift - 1 : yabai -m window --display 1 && yabai -m display --focus 1 && sketchybar -m --trigger space_change
-ctrl + alt + shift - 2 : yabai -m window --display 2 && yabai -m display --focus 2 && sketchybar -m --trigger space_change
-ctrl + alt + shift - 3 : yabai -m window --display 3 && yabai -m display --focus 3 && sketchybar -m --trigger space_change
-ctrl + alt + shift - 4 : yabai -m window --display 4 && yabai -m display --focus 4 && sketchybar -m --trigger space_change
-ctrl + alt + shift - 5 : yabai -m window --display 5 && yabai -m display --focus 5 && sketchybar -m --trigger space_change
-ctrl + alt + shift - 6 : yabai -m window --display 6 && yabai -m display --focus 6 && sketchybar -m --trigger space_change
-ctrl + alt + shift - 7 : yabai -m window --display 7 && yabai -m display --focus 7 && sketchybar -m --trigger space_change
-ctrl + alt + shift - 8 : yabai -m window --display 8 && yabai -m display --focus 8 && sketchybar -m --trigger space_change
-ctrl + alt + shift - 9 : yabai -m window --display 9 && yabai -m display --focus 9 && sketchybar -m --trigger space_change
-ctrl + alt + shift - 0x32 : yabai -m window --display last && yabai -m display --focus 9 && sketchybar -m --trigger space_change
+ctrl + alt + shift - 1 : yabai -m window --display 1 && yabai -m display --focus 1 && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Moved Window To Display 1')"
+ctrl + alt + shift - 2 : yabai -m window --display 2 && yabai -m display --focus 2 && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Moved Window To Display 2')"
+ctrl + alt + shift - 3 : yabai -m window --display 3 && yabai -m display --focus 3 && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Moved Window To Display 3')"
+ctrl + alt + shift - 4 : yabai -m window --display 4 && yabai -m display --focus 4 && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Moved Window To Display 4')"
+ctrl + alt + shift - 5 : yabai -m window --display 5 && yabai -m display --focus 5 && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Moved Window To Display 5')"
+ctrl + alt + shift - 6 : yabai -m window --display 6 && yabai -m display --focus 6 && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Moved Window To Display 6')"
+ctrl + alt + shift - 7 : yabai -m window --display 7 && yabai -m display --focus 7 && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Moved Window To Display 7')"
+ctrl + alt + shift - 8 : yabai -m window --display 8 && yabai -m display --focus 8 && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Moved Window To Display 8')"
+ctrl + alt + shift - 9 : yabai -m window --display 9 && yabai -m display --focus 9 && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Moved Window To Display 9')"
+ctrl + alt + shift - 0x32 : yabai -m window --display last && yabai -m display --focus 9 && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Moved Window To Last Display')"
 
 # shortcut to focus specific display?
 
@@ -228,14 +262,14 @@ ctrl - left : (yabai -m space --focus prev || yabai -m space --focus last) || sk
 ctrl - right : (yabai -m space --focus next || yabai -m space --focus first) || skhd -k "ctrl + cmd - right"
 
 # send window to space and follow focus
-ctrl + alt - left : (yabai -m window --space prev && yabai -m space --focus prev) || (yabai -m window --space last && yabai -m space --focus last)
-ctrl + alt - right : (yabai -m window --space next && yabai -m space --focus next) || (yabai -m window --space first && yabai -m space --focus first)
+ctrl + alt - left : (yabai -m window --space prev && yabai -m space --focus prev; hs -c "hs.alert.show('Moved Window Previous Space')") || (yabai -m window --space last && yabai -m space --focus last; hs -c "hs.alert.show('Moved Window Last Space')")
+ctrl + alt - right : (yabai -m window --space next && yabai -m space --focus next; hs -c "hs.alert.show('Moved Window Next Space')") || (yabai -m window --space first && yabai -m space --focus first; hs -c "hs.alert.show('Moved Window First Space')")
 
 # Move space left
-ctrl + shift - left : (yabai -m space --move prev && sketchybar -m --trigger space_change) || (yabai -m space --swap first && sketchybar -m --trigger space_change)
+ctrl + shift - left : (yabai -m space --move prev && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Moved Space Left')") || (yabai -m space --swap last && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Swapped With Last Space')")
 
 # Move space right
-ctrl + shift - right : (yabai -m space --move next && sketchybar -m --trigger space_change) || (yabai -m space --swap first && sketchybar -m --trigger space_change)
+ctrl + shift - right : (yabai -m space --move next && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Moved Space Right')") || (yabai -m space --swap first && sketchybar -m --trigger space_change; hs -c "hs.alert.show('Swapped With First Space')")
 
 # Focus recent space
 ctrl + alt - tab : yabai -m space --focus recent
@@ -264,4 +298,4 @@ ctrl + alt + shift - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 ctrl - return : ~/.scripts/.terminal
 
 # run terminal application
-# ctrl + alt - a : ~/.scripts/.launch $(compgen -bc | choose)
+# ctrl + alt - a : sketchybar -m --bar hidden=toggle && compgen -abc | dmenu-mac -p "Launch" | xargs ~/.scripts/.terminal && sketchybar -m --bar hidden=toggle
